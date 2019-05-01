@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class Math {
+class Main {
   public static void main(String[] args) {
     Scanner scnr = new Scanner(System.in);
     System.out.println("enter a number");
