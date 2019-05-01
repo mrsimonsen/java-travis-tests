@@ -1,6 +1,6 @@
 language: java
-install: ./gradlew assemble
-script: ./gradlew check
+install: ./gradle assemble
+script: ./gradle check
 before_cache:
   - rm -f $HOME/.gradle/chaches/modules-2/modules-2.lock
   - rm -fr $HOME//gradle/chaches/*/plugin-resolution/
