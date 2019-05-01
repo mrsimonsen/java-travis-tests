@@ -1,2 +1,10 @@
 language: java
-install: ant deps
+install: gradle assemble
+script: gradle check
+before_cache:
+  - rm -f $HOME/.gradle/chaches/modules-2/modules-2.lock
+  - rm -fr $HOME//gradle/chaches/*/plugin-resolution/
+cache:
+  directiories:
+    - $HOME/.gradle/caches
+    - $Home/.gralde/wrapper/
