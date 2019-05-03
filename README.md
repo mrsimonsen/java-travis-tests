@@ -7,3 +7,7 @@ Download JDK 8.211- requires a oracle account
 
 Would it be easier to have students upload the .class file?
 -Does repl.it create .class files that students could upload? Not all student accounts create .class files.
+
+https://ant.apache.org/
+http://tutorials.jenkov.com/java-unit-testing/running-tests-with-ant.html
+https://docs.travis-ci.com/user/reference/trusty/
