@@ -1,5 +1,4 @@
 <project name="Main" basedir="." default="main">
-    <property name="dir.src"     value="src"/>
     <property name="dir.build"   value="build"/>
     <property name="dir.classes" value="${dir.build}/classes"/>
     <property name="dir.jar"     value="${dir.build}/jar"/>
@@ -12,7 +11,7 @@
 
     <target name="compile">
         <mkdir dir="${dir.classes}"/>
-        <javac srcdir="${dir.src}" destdir="${dir.classes}"/>
+        <javac srcdir="$" destdir="${dir.classes}"/>
     </target>
 
     <target name="jar" depends="compile">
