@@ -26,6 +26,7 @@
       <classpath>
         <path refid="classpath"/>
         <path refid="application"/>
+        <path refid="junit"/>
       </classpath>
     </java>
   </target>
@@ -35,7 +36,7 @@
       <classpath>
         <path refid="classpath"/>
         <path refid="application"/>
-        <path refid="junit"
+        <path refid="junit"/>
       </classpath>
 
       <formatter type="xml"/>
