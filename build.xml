@@ -36,7 +36,7 @@
         <path refid="application"/>
       </classpath>
 
-      <formatter type="xml">
+      <formatter type="xml"/>
 
       <batchtest fork="yes">
         <fileset includes="*Test.java"/>
