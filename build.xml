@@ -18,16 +18,13 @@
     </jar>
   </target>
 
-  <classpath>
-    <pathelement id="application" location="build/jar/${ant.project.name}.jar"/>
-    <pathelement id="junit" location="ANT_HOME/lib/junit.jar"/>
+  <path id="application" location="build/jar/${ant.project.name}.jar"/>
 
   <target name="run" depends="jar">
     <java fork="true" classname="${ant.project.name}">
       <classpath>
         <path refid="classpath"/>
         <path refid="application"/>
-        <path refid="junit"/>
       </classpath>
     </java>
   </target>
@@ -37,7 +34,6 @@
       <classpath>
         <path refid="classpath"/>
         <path refid="application"/>
-        <path refid="junit"/>
       </classpath>
 
       <formatter type="xml"/>
