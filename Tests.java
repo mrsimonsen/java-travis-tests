@@ -2,7 +2,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class Tests {
-  @Before
   Main student = new Main();
 
   @Test
