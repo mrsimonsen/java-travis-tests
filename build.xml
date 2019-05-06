@@ -19,6 +19,7 @@
   </target>
 
   <path id="application" location="build/jar/${ant.project.name}.jar"/>
+  <path id="junit" location="lib/junit.jar"/>
 
   <target name="run" depends="jar">
     <java fork="true" classname="${ant.project.name}">
