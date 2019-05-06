@@ -11,8 +11,3 @@ Would it be easier to have students upload the .class file?
 https://ant.apache.org/
 http://tutorials.jenkov.com/java-unit-testing/running-tests-with-ant.html
 https://docs.travis-ci.com/user/reference/trusty/
-
-BUILD FAILED
-Target "test" does not exist in the project "Main".
-Total time: 0 seconds
-The command "ant test" exited with 1.
