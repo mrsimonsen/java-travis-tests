@@ -20,7 +20,7 @@
 
   <path id="application" location="build/jar/${ant.project.name}.jar"/>
 
-  <target name="run" depend="jar">
+  <target name="run" depends="jar">
     <java fork="true" classname="${ant.project.name}">
       <classpath>
         <path refid="classpath"/>
