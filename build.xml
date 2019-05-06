@@ -29,7 +29,7 @@
     </java>
   </target>
 
-  <target name="junit" depends="jar">
+  <target name="test" depends="jar">
     <junit printsummary="yes">
       <classpath>
         <path refid="classpath"/>
