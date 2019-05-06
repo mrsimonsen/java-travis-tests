@@ -6,6 +6,6 @@ public class HelloWorldTest{
   public void Test1(){
     HelloWorld h = new HelloWorld();
     String r = HelloWorld.say();
-    assertEquals("Hello Wolrd", r)
+    assertEquals("Hello Wolrd", r);
   }
 }
