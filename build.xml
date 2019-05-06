@@ -35,6 +35,7 @@
       <classpath>
         <path refid="classpath"/>
         <path refid="application"/>
+        <path refid="junit"
       </classpath>
 
       <formatter type="xml"/>
