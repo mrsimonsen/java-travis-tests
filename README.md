@@ -1,13 +1,8 @@
 # java-travis-tests
-[![Build Status](https://travis-ci.com/mrsimonsen/java-travis-tests.svg?branch=master)](https://travis-ci.com/mrsimonsen/java-travis-tests)
+[![Build Status](https://travis-ci.com/mrsimonsen/java-travis-tests.svg?branch=master)](https://travis-ci.com/mrsimonsen/java-travis-tests) [See last test reports](https://mrsimonsen.github.io/java-travis-tests/reports/index.html)
+
+Instructions for assignment goes here
 
 https://introcs.cs.princeton.edu/java/15inout/windows-cmd.html
 
-Code in replit or other online environment - Download JDK 8.211 requires a oracle account.
-
-Would it be easier to have students upload the .class file?
--Does repl.it create .class files that students could upload? Not all student accounts create .class files.
-
-https://ant.apache.org/
-http://tutorials.jenkov.com/java-unit-testing/running-tests-with-ant.html
-https://docs.travis-ci.com/user/reference/trusty/
+Code in repl.it or other environment
