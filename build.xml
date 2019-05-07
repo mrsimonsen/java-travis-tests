@@ -25,13 +25,13 @@
 
   <target name="run" depends="jar">
     <java fork="true" classname="${ant.project.name}">
-      <classpath refid="classpath.test">
+      <classpath refid="classpath.test"/>
     </java>
   </target>
 
   <target name="test" depends="jar">
     <junit printsummary="yes">
-      <classpath refid="classpath.test">
+      <classpath refid="classpath.test"/>
 
       <formatter type="xml"/>
 
