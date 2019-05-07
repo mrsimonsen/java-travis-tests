@@ -4,3 +4,6 @@
 Instructions for assignment goes here
 
 Code in repl.it or other environment (at your own risk)
+
+- [x] HelloWorld with single test
+- [ ] Calculator with multiple tests

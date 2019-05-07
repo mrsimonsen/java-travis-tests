@@ -1,4 +1,4 @@
-<project name="HelloWorld" basedir="." default="main">
+<project name="Math" basedir="." default="main">
   <property name="class" value="build/classes"/>
   <property name="test" value="build/test"/>
   <property name="jar" value="build/jar"/>
