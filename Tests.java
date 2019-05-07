@@ -31,7 +31,7 @@ public class Tests {
   }
   @Test
   public void testDiv2(){
-    int result = student.div(6,3);
+    double result = student.div(6,3);
     assertEquals(2.0, result, 0);
   }
   @Test
