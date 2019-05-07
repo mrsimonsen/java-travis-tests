@@ -18,26 +18,20 @@
     </jar>
   </target>
 
-  <path id="application" location="build/jar/${ant.project.name}.jar"/>
-  <path id="junit" location="junit-4.12.jar"/>
+  <path id="classpath.test">
+    <pathelement location="build/jar/${ant.project.name}.jar"/>
+    <pathelement location="junit-4.12.jar"/>
+    <pathelement location="hamcrest-core-1.3.jar"/>
 
   <target name="run" depends="jar">
     <java fork="true" classname="${ant.project.name}">
-      <classpath>
-        <path refid="classpath"/>
-        <path refid="application"/>
-        <path refid="junit"/>
-      </classpath>
+      <classpath refid="classpath.test">
     </java>
   </target>
 
   <target name="test" depends="jar">
     <junit printsummary="yes">
-      <classpath>
-        <path refid="classpath"/>
-        <path refid="application"/>
-        <path refid="junit"/>
-      </classpath>
+      <classpath refid="classpath.test">
 
       <formatter type="xml"/>
 
