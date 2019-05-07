@@ -3,6 +3,4 @@
 
 Instructions for assignment goes here
 
-https://introcs.cs.princeton.edu/java/15inout/windows-cmd.html
-
-Code in repl.it or other environment
+Code in repl.it or other environment (at your own risk)
