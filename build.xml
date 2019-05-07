@@ -42,7 +42,7 @@
     </java>
   </target>
 
-  <target name="junit" depends="jar">
+  <target name="test" depends="jar">
     <mkdir dir="reports"/>
     <junit printsummary="yes" haltonfailure="no">
       <classpath>
@@ -58,7 +58,7 @@
     </junit>
   </target>
 
-  <target name="junitreport">
+  <target name="junitreport" depends="test">
     <junitreport todir="reports">
       <fileset dir="reports" includes="*Test-*.xml"/>
       <report todir="reports"/>
