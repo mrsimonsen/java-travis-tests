@@ -1,43 +1,35 @@
 <project name="HelloWorld" basedir="." default="main">
-
-  <target name="clean">
-    <delete dir="build"/>
-  </target>
-
-  <target name="compile">
-    <mkdir dir="build/classes"/>
-    <javac srcdir="." destdir="build/classes"/>
-  </target>
-
-  <target name="jar" depends="compile">
-    <mkdir dir="build/jar"/>
-    <jar destfile="build/jar/${ant.project.name}.jar">
-      <manifest>
-        <attribute name="Main-Class" value="${ant.project.name}"/>
-      </manifest>
-    </jar>
-  </target>
+  <property name="class" value="build/main-classes"/>
+  <property name="test" value="build/test-classes"/>
 
   <path id="classpath.test">
     <pathelement location="build/jar/${ant.project.name}.jar"/>
-    <pathelement location="junit-4.12.jar"/>
-    <pathelement location="hamcrest-core-1.3.jar"/>
+    <pathelement location="lib/junit-4.12.jar"/>
+    <pathelement location="lib/hamcrest-core-1.3.jar"/>
   </path>
 
-  <target name="run" depends="jar">
-    <java fork="true" classname="${ant.project.name}">
-      <classpath refid="classpath.test"/>
-    </java>
+  <target name="compile">
+    <mkdir dir="build/classes"/>
+    <javac srcdir="." destdir="${class}"/>
   </target>
 
-  <target name="test" depends="jar">
-    <junit printsummary="yes">
+  <target name="test-compile" depends="compile">
+    <javac srcdir="." destdir="${class}">
       <classpath refid="classpath.test"/>
+    </javac>
+  </target>
+
+  <target name="test" depends="test-compile">
+    <junit printsummary="yes" haltonfailure="no" fork="true">
+      <classpath>
+        <path refid="classpath.test"/>
+        <pathelement location="${test}"/>
+      </classpath>
 
       <formatter type="xml"/>
 
-      <batchtest fork="yes">
-        <fileset includes="*Test.java"/>
+      <batchtest>
+        <fileset dir="${test}" includes="**/*Test.java"/>
       </batchtest>
     </junit>
   </target>
@@ -47,8 +39,4 @@
       <fileset includes="*Test-*.xml"/>
     </junitreport>
   </target>
-
-  <target name="clean-build" depends="clean, jar"/>
-  <target name="main" depends="clean,run"/>
-
 </project>
