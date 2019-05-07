@@ -3,19 +3,13 @@
   <property name="test" value="build/test"/>
   <property name="jar" value="build/jar"/>
 
-  <path id="classpath.test">
-    <pathelement location="build/jar/${ant.project.name}.jar"/>
-    <pathelement location="lib/junit-4.12.jar"/>
-    <pathelement location="lib/hamcrest-core-1.3.jar"/>
+  <path id="classpath">
+    <fileset dir="lib" includes="**/*.jar"/>
   </path>
 
   <target name="clean">
     <delete dir="build"/>
   </target>
-
-  <path id="classpath">
-    <fileset dir="lib" includes="**/*.jar"/>
-  </path>
 
   <target name="compile">
     <mkdir dir="${class}"/>
@@ -59,19 +53,15 @@
   </target>
 
   <target name="junitreport" depends="junit">
-    <junitreport todir="reports">
+    <junitreport todir=".">
       <fileset dir="reports" includes="*Test-*.xml"/>
-      <report todir="reports"/>
+      <report todir="."/>
     </junitreport>
   </target>
 
   <target name="clean-build" depends="clean,jar"/>
 
-  <target name="main" depends="clean,run"/>
-
-  <target name="clean-reports">
-    <delete dir="reports"/>
-  </target>
+  <target name="main" depends="run"/>
 
   <target name="test" depends="junitreport,clean"/>
 

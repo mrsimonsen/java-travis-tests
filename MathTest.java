@@ -1,7 +1,7 @@
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class Tests {
+public class MathTest {
   Math student = new Math();
 
   @Test
