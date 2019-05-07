@@ -9,12 +9,13 @@
   </path>
 
   <target name="compile">
-    <mkdir dir="build/classes"/>
+    <mkdir dir="${classes}"/>
     <javac srcdir="." destdir="${class}"/>
   </target>
 
   <target name="test-compile" depends="compile">
-    <javac srcdir="." destdir="${class}">
+    <mkdir dir="${test}"/>
+    <javac srcdir="." destdir="${test}">
       <classpath refid="classpath.test"/>
     </javac>
   </target>
