@@ -42,7 +42,7 @@
     </java>
   </target>
 
-  <target name="test" depends="jar">
+  <target name="junit" depends="jar">
     <mkdir dir="reports"/>
     <junit printsummary="yes" haltonfailure="no">
       <classpath>
@@ -58,7 +58,7 @@
     </junit>
   </target>
 
-  <target name="junitreport" depends="test">
+  <target name="junitreport" depends="junit">
     <junitreport todir="reports">
       <fileset dir="reports" includes="*Test-*.xml"/>
       <report todir="reports"/>
@@ -72,4 +72,6 @@
   <target name="clean-reports">
     <delete dir="reports"/>
   </target>
+
+  <target name="test" depends="junitreport,clean"/>
 </project>
