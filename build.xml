@@ -74,4 +74,5 @@
   </target>
 
   <target name="test" depends="junitreport,clean"/>
+
 </project>
