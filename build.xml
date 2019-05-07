@@ -9,7 +9,7 @@
   </path>
 
   <target name="compile">
-    <mkdir dir="${classes}"/>
+    <mkdir dir="${class}"/>
     <javac srcdir="." destdir="${class}"/>
   </target>
 
