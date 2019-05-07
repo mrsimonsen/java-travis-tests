@@ -1,56 +1,75 @@
 <project name="HelloWorld" basedir="." default="main">
+  <property name="class" value="build/classes"/>
+  <property name="test" value="build/test"/>
+  <property name="jar" value="build/jar"/>
+
+  <path id="classpath.test">
+    <pathelement location="build/jar/${ant.project.name}.jar"/>
+    <pathelement location="lib/junit-4.12.jar"/>
+    <pathelement location="lib/hamcrest-core-1.3.jar"/>
+  </path>
 
   <target name="clean">
     <delete dir="build"/>
   </target>
 
+  <path id="classpath">
+    <fileset dir="lib" includes="**/*.jar"/>
+  </path>
+
   <target name="compile">
-    <mkdir dir="build/classes"/>
-    <javac srcdir="." destdir="build/classes"/>
+    <mkdir dir="${class}"/>
+    <javac srcdir="." destdir="${class}" classpathref="classpath"/>
   </target>
 
   <target name="jar" depends="compile">
-    <mkdir dir="build/jar"/>
-    <jar destfile="build/jar/${ant.project.name}.jar">
+    <mkdir dir="${jar}"/>
+    <jar destfile="${jar}/${ant.project.name}.jar" basedir="${class}">
       <manifest>
         <attribute name="Main-Class" value="${ant.project.name}"/>
       </manifest>
     </jar>
   </target>
 
-  <path id="application" location="build/jar/${ant.project.name}.jar"/>
+  <path id="app" location="${jar}/${ant.project.name}.jar"/>
 
   <target name="run" depends="jar">
     <java fork="true" classname="${ant.project.name}">
       <classpath>
         <path refid="classpath"/>
-        <path refid="application"/>
+        <path refid="app"/>
       </classpath>
     </java>
   </target>
 
   <target name="test" depends="jar">
-    <junit printsummary="yes">
+    <mkdir dir="reports"/>
+    <junit printsummary="yes" haltonfailure="no">
       <classpath>
         <path refid="classpath"/>
-        <path refid="application"/>
+        <path refid="app"/>
       </classpath>
 
       <formatter type="xml"/>
 
-      <batchtest fork="yes">
-        <fileset includes="*Test.java"/>
+      <batchtest fork="yes" todir="reports">
+        <fileset dir="." includes="**/*Test.java"/>
       </batchtest>
     </junit>
   </target>
 
-  <target name="junitreport">
-    <junitreport>
-      <fileset includes="*Test-*.xml"/>
+  <target name="junitreport" depends="test">
+    <junitreport todir="reports">
+      <fileset dir="reports" includes="*Test-*.xml"/>
+      <report todir="reports"/>
     </junitreport>
   </target>
 
-  <target name="clean-build" depends="clean, jar"/>
+  <target name="clean-build" depends="clean,jar"/>
+
   <target name="main" depends="clean,run"/>
 
+  <target name="clean-reports">
+    <delete dir="reports"/>
+  </target>
 </project>

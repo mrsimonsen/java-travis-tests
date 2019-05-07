@@ -5,7 +5,7 @@ public class HelloWorldTest{
   @Test
   public void Test1(){
     HelloWorld h = new HelloWorld();
-    String r = HelloWorld.say();
-    assertEquals("Hello Wolrd", r);
+    String r = h.say();
+    assertEquals("Hello World", r);
   }
 }
