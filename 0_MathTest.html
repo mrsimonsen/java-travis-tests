@@ -1,0 +1,228 @@
+<html xmlns:string="xalan://java.lang.String" xmlns:lxslt="http://xml.apache.org/xslt">
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Unit Test Results: MathTest</title>
+<link rel="stylesheet" type="text/css" title="Style" href="stylesheet.css">
+<script type="text/javascript" language="JavaScript">
+        var TestCases = new Array();
+        var cur;
+        
+    cur = TestCases['.MathTest'] = new Array();
+    
+        cur['ant.core.lib'] = '/usr/share/ant/lib/ant.jar';
+    
+        cur['ant.file'] = '/home/travis/build/mrsimonsen/java-travis-tests/build.xml';
+    
+        cur['ant.file.Math'] = '/home/travis/build/mrsimonsen/java-travis-tests/build.xml';
+    
+        cur['ant.file.type'] = 'file';
+    
+        cur['ant.file.type.Math'] = 'file';
+    
+        cur['ant.home'] = '/usr/share/ant';
+    
+        cur['ant.java.version'] = '1.8';
+    
+        cur['ant.library.dir'] = '/usr/share/ant/lib';
+    
+        cur['ant.project.default-target'] = 'main';
+    
+        cur['ant.project.invoked-targets'] = 'test';
+    
+        cur['ant.project.name'] = 'Math';
+    
+        cur['ant.version'] = 'Apache Ant(TM) version 1.9.3 compiled on April 8 2014';
+    
+        cur['awt.toolkit'] = 'sun.awt.X11.XToolkit';
+    
+        cur['basedir'] = '/home/travis/build/mrsimonsen/java-travis-tests';
+    
+        cur['class'] = 'build/classes';
+    
+        cur['file.encoding'] = 'UTF-8';
+    
+        cur['file.encoding.pkg'] = 'sun.io';
+    
+        cur['file.separator'] = '/';
+    
+        cur['jar'] = 'build/jar';
+    
+        cur['java.awt.graphicsenv'] = 'sun.awt.X11GraphicsEnvironment';
+    
+        cur['java.awt.printerjob'] = 'sun.print.PSPrinterJob';
+    
+        cur['java.class.path'] = '/home/travis/build/mrsimonsen/java-travis-tests/lib/hamcrest-core-1.3.jar:/home/travis/build/mrsimonsen/java-travis-tests/lib/junit-4.12.jar:/home/travis/build/mrsimonsen/java-travis-tests/build/jar/Math.jar:/usr/share/java/ant-launcher-1.9.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar';
+    
+        cur['java.class.version'] = '52.0';
+    
+        cur['java.endorsed.dirs'] = '/usr/lib/jvm/java-8-oracle/jre/lib/endorsed';
+    
+        cur['java.ext.dirs'] = '/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext';
+    
+        cur['java.home'] = '/usr/lib/jvm/java-8-oracle/jre';
+    
+        cur['java.io.tmpdir'] = '/tmp';
+    
+        cur['java.library.path'] = '/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib';
+    
+        cur['java.runtime.name'] = 'Java(TM) SE Runtime Environment';
+    
+        cur['java.runtime.version'] = '1.8.0_151-b12';
+    
+        cur['java.specification.name'] = 'Java Platform API Specification';
+    
+        cur['java.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.specification.version'] = '1.8';
+    
+        cur['java.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vendor.url'] = 'http://java.oracle.com/';
+    
+        cur['java.vendor.url.bug'] = 'http://bugreport.sun.com/bugreport/';
+    
+        cur['java.version'] = '1.8.0_151';
+    
+        cur['java.vm.info'] = 'mixed mode';
+    
+        cur['java.vm.name'] = 'Java HotSpot(TM) 64-Bit Server VM';
+    
+        cur['java.vm.specification.name'] = 'Java Virtual Machine Specification';
+    
+        cur['java.vm.specification.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.specification.version'] = '1.8';
+    
+        cur['java.vm.vendor'] = 'Oracle Corporation';
+    
+        cur['java.vm.version'] = '25.151-b12';
+    
+        cur['line.separator'] = '\n';
+    
+        cur['os.arch'] = 'amd64';
+    
+        cur['os.name'] = 'Linux';
+    
+        cur['os.version'] = '4.4.0-101-generic';
+    
+        cur['path.separator'] = ':';
+    
+        cur['sun.arch.data.model'] = '64';
+    
+        cur['sun.boot.class.path'] = '/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes';
+    
+        cur['sun.boot.library.path'] = '/usr/lib/jvm/java-8-oracle/jre/lib/amd64';
+    
+        cur['sun.cpu.endian'] = 'little';
+    
+        cur['sun.cpu.isalist'] = '';
+    
+        cur['sun.io.unicode.encoding'] = 'UnicodeLittle';
+    
+        cur['sun.java.command'] = 'org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner MathTest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.SummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/travis/build/mrsimonsen/java-travis-tests/reports/TEST-MathTest.xml crashfile=/home/travis/build/mrsimonsen/java-travis-tests/junitvmwatcher7990310653549584645.properties propsfile=/home/travis/build/mrsimonsen/java-travis-tests/junit2173228195867339141.properties';
+    
+        cur['sun.java.launcher'] = 'SUN_STANDARD';
+    
+        cur['sun.jnu.encoding'] = 'UTF-8';
+    
+        cur['sun.management.compiler'] = 'HotSpot 64-Bit Tiered Compilers';
+    
+        cur['sun.os.patch.level'] = 'unknown';
+    
+        cur['test'] = 'build/test';
+    
+        cur['user.country'] = 'US';
+    
+        cur['user.dir'] = '/home/travis/build/mrsimonsen/java-travis-tests';
+    
+        cur['user.home'] = '/home/travis';
+    
+        cur['user.language'] = 'en';
+    
+        cur['user.name'] = 'travis';
+    
+        cur['user.timezone'] = '';
+    </script><script type="text/javascript" language="JavaScript">
+        function displayProperties (name) {
+          var win = window.open('','JUnitSystemProperties','scrollbars=1,resizable=1');
+          var doc = win.document;
+          doc.open();
+          doc.write("<html><head><title>Properties of " + name + "</title>");
+          doc.write("<style type=\"text/css\">");
+          doc.write("body {font:normal 68% verdana,arial,helvetica; color:#000000; }");
+          doc.write("table tr td, table tr th { font-size: 68%; }");
+          doc.write("table.properties { border-collapse:collapse; border-left:solid 1 #cccccc; border-top:solid 1 #cccccc; padding:5px; }");
+          doc.write("table.properties th { text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#eeeeee; }");
+          doc.write("table.properties td { font:normal; text-align:left; border-right:solid 1 #cccccc; border-bottom:solid 1 #cccccc; background-color:#fffffff; }");
+          doc.write("h3 { margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica }");
+          doc.write("</style>");
+          doc.write("</head><body>");
+          doc.write("<h3>Properties of " + name + "</h3>");
+          doc.write("<div align=\"right\"><a href=\"javascript:window.close();\">Close</a></div>");
+          doc.write("<table class='properties'>");
+          doc.write("<tr><th>Name</th><th>Value</th></tr>");
+          for (prop in TestCases[name]) {
+            doc.write("<tr><th>" + prop + "</th><td>" + TestCases[name][prop] + "</td></tr>");
+          }
+          doc.write("</table>");
+          doc.write("</body></html>");
+          doc.close();
+          win.focus();
+        }
+      
+      </script>
+</head>
+<body>
+<h1>Unit Test Results.</h1>
+<table width="100%">
+<tr>
+<td align="left"></td><td align="right">Designed for use with <a href="http://www.junit.org/">JUnit</a> and <a href="http://ant.apache.org/">Ant</a>.</td>
+</tr>
+</table>
+<hr size="1">
+<h3>Class MathTest</h3>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th width="80%">Name</th><th>Tests</th><th>Errors</th><th>Failures</th><th>Skipped</th><th nowrap>Time(s)</th><th nowrap>Time Stamp</th><th>Host</th>
+</tr>
+<tr valign="top" class="Pass">
+<td><a title="Display all tests" href="0_MathTest.html">MathTest</a></td><td><a title="Display all tests" href="0_MathTest.html">8</a></td><td>0</td><td>0</td><td>0</td><td>0.115</td><td>2019-05-08T15:30:18</td><td>travis-job-b1dcb276-a331-4af3-a425-17b11b4af873</td>
+</tr>
+</table>
+<h2>Tests</h2>
+<table class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tr valign="top">
+<th>Name</th><th>Status</th><th width="80%">Type</th><th nowrap>Time(s)</th>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testDiv1"></a>testDiv1</td><td>Success</td><td></td><td>0.001</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testDiv2"></a>testDiv2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testMul1"></a>testMul1</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testMul2"></a>testMul2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testSub1"></a>testSub1</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testSub2"></a>testSub2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testSum1"></a>testSum1</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+<tr valign="top" class="TableRowColor">
+<td><a name="testSum2"></a>testSum2</td><td>Success</td><td></td><td>0.000</td>
+</tr>
+</table>
+<div class="Properties">
+<a href="javascript:displayProperties('.MathTest');">
+                    Properties &raquo;
+                </a>
+</div>
+</body>
+</html>
