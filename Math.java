@@ -5,7 +5,7 @@ class Math {
     Scanner scnr = new Scanner(System.in);
     System.out.println("enter a number");
     int a = scnr.nextInt();
-    System.out.println("anter another number");
+    System.out.println("enter another number");
     int b = scnr.nextInt();
     System.out.println("+ is "+ sum(a,b));
     System.out.println("- is "+ sub(a,b));
