@@ -3,15 +3,18 @@ jdk: oraclejdk8
 
 dist: trusty
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN
-  local_dir: reports
-  target_branch: gh-pages
-  keep_history: false
-  on:
-    branch: master
+#impoatical for student repos from github classroom - I'll need to allow each
+#repo to run and give an access token to each - but could be useful for batch
+#running all repos when they're due
+#deploy:
+#  provider: pages
+#  skip_cleanup: true
+#  github_token: $GITHUB_TOKEN
+#  local_dir: reports
+#  target_branch: gh-pages
+#  keep_history: false
+#  on:
+#    branch: master
 
 notifications:
   email: never
