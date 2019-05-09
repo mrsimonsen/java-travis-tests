@@ -19,6 +19,7 @@ public class Main{
 
     if(a.equals("run")){
       System.out.println("\n--Running Program--\n");
+//update with main class name      
       Math.main(args);
     }
     else if (a.equals("test")){
